@@ -1,6 +1,9 @@
 ﻿namespace Task_1
 {
-    class TableWorkers
+    /// <summary>
+    /// A class that implements data stored in a table
+    /// </summary>
+    internal class TableWorkers
     {
         public string Text { get; set; }
         public uint WordsCount { get; set; }
@@ -13,11 +16,19 @@
             VowelsCount = VolwesCounter();
         }
 
+        /// <summary>
+        /// Counts the number of words in the text
+        /// </summary>
+        /// <returns>Number of words</returns>
         private uint WordCounter()
         {
             return (uint)Text.Split(" ").Length;
         }
 
+        /// <summary>
+        /// Counts the number of vowels in the text
+        /// </summary>
+        /// <returns>Тumber of vowels</returns>
         private uint VolwesCounter()
         {
             Vowels vowels = new Vowels();
