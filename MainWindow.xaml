@@ -1,30 +1,40 @@
-﻿<Window x:Class="TheMostGames_TestTasks.MainWindow"
+﻿<Window x:Class="Task_1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Task 1" Height="324" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}" x:Key="WrapText">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextAlignment" Value="Justify"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="CenteredText">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Label Content="Идентификаторы строк: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="Identificators_Box" HorizontalAlignment="Left" Margin="155,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" PreviewTextInput="Identificators_Box_PreviewTextInput"/>
         <Button Content="Подсчитать" HorizontalAlignment="Left" Margin="335,13,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
-        <DataGrid Name="OutputDataTable" Margin="10,40,10,10" IsReadOnly="True" AutoGenerateColumns="False">
+        <DataGrid Name="OutputDataTable" Margin="10,40,10,10" GridLinesVisibility="None" IsReadOnly="True" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeColumns="False">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="ContentTemplate">
                         <Setter.Value>
                             <DataTemplate>
-                                <TextBlock TextWrapping="Wrap" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding}" TextAlignment="Center"/>
                             </DataTemplate>
                         </Setter.Value>
                     </Setter>
                 </Style>
             </DataGrid.ColumnHeaderStyle>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Текст" Width="*"/>
-                <DataGridTextColumn Header="Количество слов" Width="75"/>
-                <DataGridTextColumn Header="Количество гласных" Width="75"/>
+                <DataGridTextColumn Header="Текст" Width="*" Binding="{Binding Text}" ElementStyle="{StaticResource WrapText}"/>
+                <DataGridTextColumn Header="Количество слов" Width="75" Binding="{Binding WordsCount}" ElementStyle="{StaticResource CenteredText}"/>
+                <DataGridTextColumn Header="Количество гласных" Width="75"  Binding="{Binding VowelsCount}" ElementStyle="{StaticResource CenteredText}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
