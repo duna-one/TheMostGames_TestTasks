@@ -6,7 +6,7 @@
         public uint WordsCount { get; set; }
         public uint VowelsCount { get; set; }
 
-        TableWorkers(string text)
+        public TableWorkers(string text)
         {
             Text = text;
             WordsCount = WordCounter();
