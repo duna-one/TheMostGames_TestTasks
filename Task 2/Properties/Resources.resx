@@ -117,32 +117,344 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="docProps_app" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\app.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="app" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"&gt;
+    &lt;Application&gt;Microsoft Excel&lt;/Application&gt;
+    &lt;DocSecurity&gt;0&lt;/DocSecurity&gt;
+    &lt;ScaleCrop&gt;false&lt;/ScaleCrop&gt;
+    &lt;HeadingPairs&gt;
+        &lt;vt:vector size="2" baseType="variant"&gt;
+            &lt;vt:variant&gt;
+                &lt;vt:lpstr&gt;Worksheets&lt;/vt:lpstr&gt;
+            &lt;/vt:variant&gt;
+            &lt;vt:variant&gt;
+                &lt;vt:i4&gt;1&lt;/vt:i4&gt;
+            &lt;/vt:variant&gt;
+        &lt;/vt:vector&gt;
+    &lt;/HeadingPairs&gt;
+    &lt;TitlesOfParts&gt;
+        &lt;vt:vector size="1" baseType="lpstr"&gt;
+            &lt;vt:lpstr&gt;Лист1&lt;/vt:lpstr&gt;
+        &lt;/vt:vector&gt;
+    &lt;/TitlesOfParts&gt;
+    &lt;Company&gt;&lt;/Company&gt;
+    &lt;LinksUpToDate&gt;false&lt;/LinksUpToDate&gt;
+    &lt;SharedDoc&gt;false&lt;/SharedDoc&gt;
+    &lt;HyperlinksChanged&gt;false&lt;/HyperlinksChanged&gt;
+    &lt;AppVersion&gt;16.0300&lt;/AppVersion&gt;
+&lt;/Properties&gt;</value>
   </data>
-  <data name="docProps_core" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\core.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  <data name="Content_Types" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"&gt;&lt;Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/&gt;&lt;Default Extension="xml" ContentType="application/xml"/&gt;&lt;Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/&gt;&lt;Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/&gt;&lt;Override PartName="/xl/theme/theme1.xml" ContentType="application/vnd.openxmlformats-officedocument.theme+xml"/&gt;&lt;Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/&gt;&lt;Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/&gt;&lt;Override PartName="/docProps/app.xml" ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml"/&gt;&lt;/Types&gt;</value>
   </data>
-  <data name="sheet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sheet1.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="core" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;dc:creator&gt;Loc-to-Exel Parcer&lt;/dc:creator&gt;&lt;cp:lastModifiedBy&gt;Loc-to-Exel Parcer&lt;/cp:lastModifiedBy&gt;&lt;dcterms:created xsi:type="dcterms:W3CDTF"&gt;2015-06-05T18:19:34Z&lt;/dcterms:created&gt;&lt;dcterms:modified xsi:type="dcterms:W3CDTF"&gt;2015-06-05T18:19:39Z&lt;/dcterms:modified&gt;&lt;/cp:coreProperties&gt;</value>
   </data>
-  <data name="xl\theme_theme1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\theme1.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="rels" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"&gt;&lt;Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" Target="docProps/app.xml"/&gt;&lt;Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/&gt;&lt;Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/&gt;&lt;/Relationships&gt;</value>
   </data>
-  <data name="xl\_rels_workbook.xml" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\workbook.xml.rels;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="sheet1" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x14ac="http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac" mc:Ignorable="x14ac"&gt;
+  &lt;dimension ref="A1"/&gt;
+  &lt;sheetViews&gt;
+    &lt;sheetView tabSelected="1" workbookViewId="0"/&gt;
+  &lt;/sheetViews&gt;
+  &lt;sheetFormatPr defaultRowHeight="15" x14ac:dyDescent="0.25"/&gt;
+  &lt;sheetData/&gt;
+  &lt;pageMargins left="0.7" right="0.7" top="0.75" bottom="0.75" header="0.3" footer="0.3"/&gt;
+&lt;/worksheet&gt;</value>
   </data>
-  <data name="xl_styles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\styles.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  <data name="styles" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="x14ac x16r2" xmlns:x14ac="http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac" xmlns:x16r2="http://schemas.microsoft.com/office/spreadsheetml/2015/02/main"&gt;&lt;fonts count="1" x14ac:knownFonts="1"&gt;&lt;font&gt;&lt;sz val="11"/&gt;&lt;color theme="1"/&gt;&lt;name val="Calibri"/&gt;&lt;family val="2"/&gt;&lt;scheme val="minor"/&gt;&lt;/font&gt;&lt;/fonts&gt;&lt;fills count="2"&gt;&lt;fill&gt;&lt;patternFill patternType="none"/&gt;&lt;/fill&gt;&lt;fill&gt;&lt;patternFill patternType="gray125"/&gt;&lt;/fill&gt;&lt;/fills&gt;&lt;borders count="1"&gt;&lt;border&gt;&lt;left/&gt;&lt;right/&gt;&lt;top/&gt;&lt;bottom/&gt;&lt;diagonal/&gt;&lt;/border&gt;&lt;/borders&gt;&lt;cellStyleXfs count="1"&gt;&lt;xf numFmtId="0" fontId="0" fillId="0" borderId="0"/&gt;&lt;/cellStyleXfs&gt;&lt;cellXfs count="1"&gt;&lt;xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/&gt;&lt;/cellXfs&gt;&lt;cellStyles count="1"&gt;&lt;cellStyle name="Normal" xfId="0" builtinId="0"/&gt;&lt;/cellStyles&gt;&lt;dxfs count="0"/&gt;&lt;tableStyles count="0" defaultTableStyle="TableStyleMedium2" defaultPivotStyle="PivotStyleLight16"/&gt;&lt;extLst&gt;&lt;ext uri="{EB79DEF2-80B8-43e5-95BD-54CBDDF9020C}" xmlns:x14="http://schemas.microsoft.com/office/spreadsheetml/2009/9/main"&gt;&lt;x14:slicerStyles defaultSlicerStyle="SlicerStyleLight1"/&gt;&lt;/ext&gt;&lt;ext uri="{9260A510-F301-46a8-8635-F512D64BE5F5}" xmlns:x15="http://schemas.microsoft.com/office/spreadsheetml/2010/11/main"&gt;&lt;x15:timelineStyles defaultTimelineStyle="TimeSlicerStyleLight1"/&gt;&lt;/ext&gt;&lt;/extLst&gt;&lt;/styleSheet&gt;</value>
   </data>
-  <data name="xl_workbook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\workbook.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="theme1" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;a:theme xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" name="Office Theme"&gt;
+    &lt;a:themeElements&gt;
+        &lt;a:clrScheme name="Office"&gt;
+            &lt;a:dk1&gt;
+                &lt;a:sysClr val="windowText" lastClr="000000"/&gt;
+            &lt;/a:dk1&gt;
+            &lt;a:lt1&gt;
+                &lt;a:sysClr val="window" lastClr="FFFFFF"/&gt;
+            &lt;/a:lt1&gt;
+            &lt;a:dk2&gt;
+                &lt;a:srgbClr val="44546A"/&gt;
+            &lt;/a:dk2&gt;
+            &lt;a:lt2&gt;
+                &lt;a:srgbClr val="E7E6E6"/&gt;
+            &lt;/a:lt2&gt;
+            &lt;a:accent1&gt;
+                &lt;a:srgbClr val="5B9BD5"/&gt;
+            &lt;/a:accent1&gt;
+            &lt;a:accent2&gt;
+                &lt;a:srgbClr val="ED7D31"/&gt;
+            &lt;/a:accent2&gt;
+            &lt;a:accent3&gt;
+                &lt;a:srgbClr val="A5A5A5"/&gt;
+            &lt;/a:accent3&gt;
+            &lt;a:accent4&gt;
+                &lt;a:srgbClr val="FFC000"/&gt;
+            &lt;/a:accent4&gt;
+            &lt;a:accent5&gt;
+                &lt;a:srgbClr val="4472C4"/&gt;
+            &lt;/a:accent5&gt;
+            &lt;a:accent6&gt;
+                &lt;a:srgbClr val="70AD47"/&gt;
+            &lt;/a:accent6&gt;
+            &lt;a:hlink&gt;
+                &lt;a:srgbClr val="0563C1"/&gt;
+            &lt;/a:hlink&gt;
+            &lt;a:folHlink&gt;
+                &lt;a:srgbClr val="954F72"/&gt;
+            &lt;/a:folHlink&gt;
+        &lt;/a:clrScheme&gt;
+        &lt;a:fontScheme name="Office"&gt;
+            &lt;a:majorFont&gt;
+                &lt;a:latin typeface="Calibri Light" panose="020F0302020204030204"/&gt;
+                &lt;a:ea typeface=""/&gt;
+                &lt;a:cs typeface=""/&gt;
+                &lt;a:font script="Jpan" typeface="Yu Gothic Light"/&gt;
+                &lt;a:font script="Hang" typeface="맑은 고딕"/&gt;
+                &lt;a:font script="Hans" typeface="等线 Light"/&gt;
+                &lt;a:font script="Hant" typeface="新細明體"/&gt;
+                &lt;a:font script="Arab" typeface="Times New Roman"/&gt;
+                &lt;a:font script="Hebr" typeface="Times New Roman"/&gt;
+                &lt;a:font script="Thai" typeface="Tahoma"/&gt;
+                &lt;a:font script="Ethi" typeface="Nyala"/&gt;
+                &lt;a:font script="Beng" typeface="Vrinda"/&gt;
+                &lt;a:font script="Gujr" typeface="Shruti"/&gt;
+                &lt;a:font script="Khmr" typeface="MoolBoran"/&gt;
+                &lt;a:font script="Knda" typeface="Tunga"/&gt;
+                &lt;a:font script="Guru" typeface="Raavi"/&gt;
+                &lt;a:font script="Cans" typeface="Euphemia"/&gt;
+                &lt;a:font script="Cher" typeface="Plantagenet Cherokee"/&gt;
+                &lt;a:font script="Yiii" typeface="Microsoft Yi Baiti"/&gt;
+                &lt;a:font script="Tibt" typeface="Microsoft Himalaya"/&gt;
+                &lt;a:font script="Thaa" typeface="MV Boli"/&gt;
+                &lt;a:font script="Deva" typeface="Mangal"/&gt;
+                &lt;a:font script="Telu" typeface="Gautami"/&gt;
+                &lt;a:font script="Taml" typeface="Latha"/&gt;
+                &lt;a:font script="Syrc" typeface="Estrangelo Edessa"/&gt;
+                &lt;a:font script="Orya" typeface="Kalinga"/&gt;
+                &lt;a:font script="Mlym" typeface="Kartika"/&gt;
+                &lt;a:font script="Laoo" typeface="DokChampa"/&gt;
+                &lt;a:font script="Sinh" typeface="Iskoola Pota"/&gt;
+                &lt;a:font script="Mong" typeface="Mongolian Baiti"/&gt;
+                &lt;a:font script="Viet" typeface="Times New Roman"/&gt;
+                &lt;a:font script="Uigh" typeface="Microsoft Uighur"/&gt;
+                &lt;a:font script="Geor" typeface="Sylfaen"/&gt;
+            &lt;/a:majorFont&gt;
+            &lt;a:minorFont&gt;
+                &lt;a:latin typeface="Calibri" panose="020F0502020204030204"/&gt;
+                &lt;a:ea typeface=""/&gt;
+                &lt;a:cs typeface=""/&gt;
+                &lt;a:font script="Jpan" typeface="Yu Gothic"/&gt;
+                &lt;a:font script="Hang" typeface="맑은 고딕"/&gt;
+                &lt;a:font script="Hans" typeface="等线"/&gt;
+                &lt;a:font script="Hant" typeface="新細明體"/&gt;
+                &lt;a:font script="Arab" typeface="Arial"/&gt;
+                &lt;a:font script="Hebr" typeface="Arial"/&gt;
+                &lt;a:font script="Thai" typeface="Tahoma"/&gt;
+                &lt;a:font script="Ethi" typeface="Nyala"/&gt;
+                &lt;a:font script="Beng" typeface="Vrinda"/&gt;
+                &lt;a:font script="Gujr" typeface="Shruti"/&gt;
+                &lt;a:font script="Khmr" typeface="DaunPenh"/&gt;
+                &lt;a:font script="Knda" typeface="Tunga"/&gt;
+                &lt;a:font script="Guru" typeface="Raavi"/&gt;
+                &lt;a:font script="Cans" typeface="Euphemia"/&gt;
+                &lt;a:font script="Cher" typeface="Plantagenet Cherokee"/&gt;
+                &lt;a:font script="Yiii" typeface="Microsoft Yi Baiti"/&gt;
+                &lt;a:font script="Tibt" typeface="Microsoft Himalaya"/&gt;
+                &lt;a:font script="Thaa" typeface="MV Boli"/&gt;
+                &lt;a:font script="Deva" typeface="Mangal"/&gt;
+                &lt;a:font script="Telu" typeface="Gautami"/&gt;
+                &lt;a:font script="Taml" typeface="Latha"/&gt;
+                &lt;a:font script="Syrc" typeface="Estrangelo Edessa"/&gt;
+                &lt;a:font script="Orya" typeface="Kalinga"/&gt;
+                &lt;a:font script="Mlym" typeface="Kartika"/&gt;
+                &lt;a:font script="Laoo" typeface="DokChampa"/&gt;
+                &lt;a:font script="Sinh" typeface="Iskoola Pota"/&gt;
+                &lt;a:font script="Mong" typeface="Mongolian Baiti"/&gt;
+                &lt;a:font script="Viet" typeface="Arial"/&gt;
+                &lt;a:font script="Uigh" typeface="Microsoft Uighur"/&gt;
+                &lt;a:font script="Geor" typeface="Sylfaen"/&gt;
+            &lt;/a:minorFont&gt;
+        &lt;/a:fontScheme&gt;
+        &lt;a:fmtScheme name="Office"&gt;
+            &lt;a:fillStyleLst&gt;
+                &lt;a:solidFill&gt;
+                    &lt;a:schemeClr val="phClr"/&gt;
+                &lt;/a:solidFill&gt;
+                &lt;a:gradFill rotWithShape="1"&gt;
+                    &lt;a:gsLst&gt;
+                        &lt;a:gs pos="0"&gt;
+                            &lt;a:schemeClr val="phClr"&gt;
+                                &lt;a:lumMod val="110000"/&gt;
+                                &lt;a:satMod val="105000"/&gt;
+                                &lt;a:tint val="67000"/&gt;
+                            &lt;/a:schemeClr&gt;
+                        &lt;/a:gs&gt;
+                        &lt;a:gs pos="50000"&gt;
+                            &lt;a:schemeClr val="phClr"&gt;
+                                &lt;a:lumMod val="105000"/&gt;
+                                &lt;a:satMod val="103000"/&gt;
+                                &lt;a:tint val="73000"/&gt;
+                            &lt;/a:schemeClr&gt;
+                        &lt;/a:gs&gt;
+                        &lt;a:gs pos="100000"&gt;
+                            &lt;a:schemeClr val="phClr"&gt;
+                                &lt;a:lumMod val="105000"/&gt;
+                                &lt;a:satMod val="109000"/&gt;
+                                &lt;a:tint val="81000"/&gt;
+                            &lt;/a:schemeClr&gt;
+                        &lt;/a:gs&gt;
+                    &lt;/a:gsLst&gt;
+                    &lt;a:lin ang="5400000" scaled="0"/&gt;
+                &lt;/a:gradFill&gt;
+                &lt;a:gradFill rotWithShape="1"&gt;
+                    &lt;a:gsLst&gt;
+                        &lt;a:gs pos="0"&gt;
+                            &lt;a:schemeClr val="phClr"&gt;
+                                &lt;a:satMod val="103000"/&gt;
+                                &lt;a:lumMod val="102000"/&gt;
+                                &lt;a:tint val="94000"/&gt;
+                            &lt;/a:schemeClr&gt;
+                        &lt;/a:gs&gt;
+                        &lt;a:gs pos="50000"&gt;
+                            &lt;a:schemeClr val="phClr"&gt;
+                                &lt;a:satMod val="110000"/&gt;
+                                &lt;a:lumMod val="100000"/&gt;
+                                &lt;a:shade val="100000"/&gt;
+                            &lt;/a:schemeClr&gt;
+                        &lt;/a:gs&gt;
+                        &lt;a:gs pos="100000"&gt;
+                            &lt;a:schemeClr val="phClr"&gt;
+                                &lt;a:lumMod val="99000"/&gt;
+                                &lt;a:satMod val="120000"/&gt;
+                                &lt;a:shade val="78000"/&gt;
+                            &lt;/a:schemeClr&gt;
+                        &lt;/a:gs&gt;
+                    &lt;/a:gsLst&gt;
+                    &lt;a:lin ang="5400000" scaled="0"/&gt;
+                &lt;/a:gradFill&gt;
+            &lt;/a:fillStyleLst&gt;
+            &lt;a:lnStyleLst&gt;
+                &lt;a:ln w="6350" cap="flat" cmpd="sng" algn="ctr"&gt;
+                    &lt;a:solidFill&gt;
+                        &lt;a:schemeClr val="phClr"/&gt;
+                    &lt;/a:solidFill&gt;
+                    &lt;a:prstDash val="solid"/&gt;
+                    &lt;a:miter lim="800000"/&gt;
+                &lt;/a:ln&gt;
+                &lt;a:ln w="12700" cap="flat" cmpd="sng" algn="ctr"&gt;
+                    &lt;a:solidFill&gt;
+                        &lt;a:schemeClr val="phClr"/&gt;
+                    &lt;/a:solidFill&gt;
+                    &lt;a:prstDash val="solid"/&gt;
+                    &lt;a:miter lim="800000"/&gt;
+                &lt;/a:ln&gt;
+                &lt;a:ln w="19050" cap="flat" cmpd="sng" algn="ctr"&gt;
+                    &lt;a:solidFill&gt;
+                        &lt;a:schemeClr val="phClr"/&gt;
+                    &lt;/a:solidFill&gt;
+                    &lt;a:prstDash val="solid"/&gt;
+                    &lt;a:miter lim="800000"/&gt;
+                &lt;/a:ln&gt;
+            &lt;/a:lnStyleLst&gt;
+            &lt;a:effectStyleLst&gt;
+                &lt;a:effectStyle&gt;
+                    &lt;a:effectLst/&gt;
+                &lt;/a:effectStyle&gt;
+                &lt;a:effectStyle&gt;
+                    &lt;a:effectLst/&gt;
+                &lt;/a:effectStyle&gt;
+                &lt;a:effectStyle&gt;
+                    &lt;a:effectLst&gt;
+                        &lt;a:outerShdw blurRad="57150" dist="19050" dir="5400000" algn="ctr" rotWithShape="0"&gt;
+                            &lt;a:srgbClr val="000000"&gt;
+                                &lt;a:alpha val="63000"/&gt;
+                            &lt;/a:srgbClr&gt;
+                        &lt;/a:outerShdw&gt;
+                    &lt;/a:effectLst&gt;
+                &lt;/a:effectStyle&gt;
+            &lt;/a:effectStyleLst&gt;
+            &lt;a:bgFillStyleLst&gt;
+                &lt;a:solidFill&gt;
+                    &lt;a:schemeClr val="phClr"/&gt;
+                &lt;/a:solidFill&gt;
+                &lt;a:solidFill&gt;
+                    &lt;a:schemeClr val="phClr"&gt;
+                        &lt;a:tint val="95000"/&gt;
+                        &lt;a:satMod val="170000"/&gt;
+                    &lt;/a:schemeClr&gt;
+                &lt;/a:solidFill&gt;
+                &lt;a:gradFill rotWithShape="1"&gt;
+                    &lt;a:gsLst&gt;
+                        &lt;a:gs pos="0"&gt;
+                            &lt;a:schemeClr val="phClr"&gt;
+                                &lt;a:tint val="93000"/&gt;
+                                &lt;a:satMod val="150000"/&gt;
+                                &lt;a:shade val="98000"/&gt;
+                                &lt;a:lumMod val="102000"/&gt;
+                            &lt;/a:schemeClr&gt;
+                        &lt;/a:gs&gt;
+                        &lt;a:gs pos="50000"&gt;
+                            &lt;a:schemeClr val="phClr"&gt;
+                                &lt;a:tint val="98000"/&gt;
+                                &lt;a:satMod val="130000"/&gt;
+                                &lt;a:shade val="90000"/&gt;
+                                &lt;a:lumMod val="103000"/&gt;
+                            &lt;/a:schemeClr&gt;
+                        &lt;/a:gs&gt;
+                        &lt;a:gs pos="100000"&gt;
+                            &lt;a:schemeClr val="phClr"&gt;
+                                &lt;a:shade val="63000"/&gt;
+                                &lt;a:satMod val="120000"/&gt;
+                            &lt;/a:schemeClr&gt;
+                        &lt;/a:gs&gt;
+                    &lt;/a:gsLst&gt;
+                    &lt;a:lin ang="5400000" scaled="0"/&gt;
+                &lt;/a:gradFill&gt;
+            &lt;/a:bgFillStyleLst&gt;
+        &lt;/a:fmtScheme&gt;
+    &lt;/a:themeElements&gt;
+    &lt;a:objectDefaults/&gt;
+    &lt;a:extraClrSchemeLst/&gt;
+    &lt;a:extLst&gt;
+        &lt;a:ext uri="{05A4C25C-085E-4340-85A3-A5531E510DB2}"&gt;
+            &lt;thm15:themeFamily xmlns:thm15="http://schemas.microsoft.com/office/thememl/2012/main" name="Office Theme" id="{62F939B6-93AF-4DB8-9C6B-D6C7DFDC589F}" vid="{4A3C46E8-61CC-4603-A589-7422A47A8E4A}"/&gt;
+        &lt;/a:ext&gt;
+    &lt;/a:extLst&gt;
+&lt;/a:theme&gt;</value>
   </data>
-  <data name="[Content_Types]" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\[Content_Types].xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  <data name="workbook" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="x15" xmlns:x15="http://schemas.microsoft.com/office/spreadsheetml/2010/11/main"&gt;
+    &lt;fileVersion appName="xl" lastEdited="6" lowestEdited="6" rupBuild="14420"/&gt;
+    &lt;workbookPr defaultThemeVersion="164011"/&gt;
+    &lt;bookViews&gt;
+        &lt;workbookView xWindow="0" yWindow="0" windowWidth="22260" windowHeight="12645"/&gt;
+    &lt;/bookViews&gt;
+    &lt;sheets&gt;
+        &lt;sheet name="Лист1" sheetId="1" r:id="rId1"/&gt;
+    &lt;/sheets&gt;
+    &lt;calcPr calcId="162913"/&gt;
+    &lt;extLst&gt;
+        &lt;ext uri="{140A7094-0E35-4892-8432-C4D2E57EDEB5}" xmlns:x15="http://schemas.microsoft.com/office/spreadsheetml/2010/11/main"&gt;
+            &lt;x15:workbookPr chartTrackingRefBase="1"/&gt;
+        &lt;/ext&gt;
+    &lt;/extLst&gt;
+&lt;/workbook&gt;</value>
   </data>
-  <data name="_rels" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\_rels.rels;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="workbook_rels" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"&gt;&lt;Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/&gt;&lt;Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" Target="theme/theme1.xml"/&gt;&lt;Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/&gt;&lt;/Relationships&gt;</value>
   </data>
 </root>
