@@ -28,9 +28,11 @@ namespace Task_2
 
         public Parcer(string inputPath, string outputPath, string filename)
         {
+            Data = new List<DataStructure>();
+
             using (StreamReader fileReader = new StreamReader(inputPath))
             {
-                JObject dataJSON = JObject.Parse(inputPath);
+                JObject dataJSON = JObject.Parse(fileReader.ReadToEnd());
 
                 foreach (JToken chld in dataJSON["Children"])
                 {
@@ -58,7 +60,7 @@ namespace Task_2
         private void CreateXmlDocument()
         {
             uint rowCounter = 1;
-            XDocument xmlDocument = XDocument.Load(@"\ExelFileTemplate\xl\worksheets\sheet1.xml");
+            XDocument xmlDocument = XDocument.Load(@"ExelFileTemplate\xl\worksheets\sheet1.xml");
             xmlDocument.Element("worksheet")
                        .Element("sheetData")
                        .Elements("row").Remove();
