@@ -4,6 +4,10 @@ namespace Task_3
 {
     internal class Result
     {
+        /// <summary>
+        /// A class that describes the data for output of the result
+        /// </summary>
+        /// 
         public string RussianString { get; private set; }
         public List<string> EnglishStrings { get; private set; }
 
@@ -13,6 +17,10 @@ namespace Task_3
             EnglishStrings = new List<string>();
         }
 
+        /// <summary>
+        /// Adds an English string
+        /// </summary>
+        /// <param name="engString">English string</param>
         public void AddEnglishString(string engString)
         {
             EnglishStrings.Add(engString);

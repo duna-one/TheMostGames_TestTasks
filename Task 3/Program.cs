@@ -17,6 +17,7 @@ namespace Task_3
         {
             string inputFilePath = "";
 
+            // File source input and check
             while (inputFilePath == "")
             {
                 Console.WriteLine("Enter file source:");
@@ -27,11 +28,17 @@ namespace Task_3
                 }
             }
 
-            SortStrings(inputFilePath);            
+            // Sorting the strings into English and Russian
+            SortStrings(inputFilePath);
+
+            // Getting the result
             GetResults();
 
+            // Waiting until all secondary threads are completed
             while (RunningThreads != 0);
-            foreach(Result result in Results)
+
+            // Displaying the result on the screen
+            foreach (Result result in Results)
             {
                 Console.WriteLine(result.ToString());
             }
@@ -40,6 +47,10 @@ namespace Task_3
 
         }
 
+        /// <summary>
+        /// Reads from a file and sorts the rows into 2 lists
+        /// </summary>
+        /// <param name="inputFilePath">Input file path</param>
         private static void SortStrings(string inputFilePath)
         {
             StreamReader streamReader = new StreamReader(inputFilePath);
@@ -59,42 +70,62 @@ namespace Task_3
             }
         }
 
+        /// <summary>
+        /// Checks whether the string is English
+        /// </summary>
+        /// <param name="input">The string to check</param>
+        /// <returns>True if the string is English and a false if it is Russian</returns>
         private static bool isEnglishString(string input)
         {
             return new Regex("[a-z]|[A-Z]", RegexOptions.Compiled).IsMatch(input[0]+"");
         }
 
+        /// <summary>
+        /// Creates the result of the program
+        /// </summary>
         private static void GetResults()
         {
             while (RussianStrings.Count != 0)
             {
                 for (int i = 0; i < RussianStrings.Count; i++)
                 {
+                    // Сheck whether the index calculation operation is completed
                     if (RussianStrings[i].ThreadRunning)
                     {
                         continue;
                     }
                     else
                     {
+                        // Adding the result to the list
                         Results.Add(new Result(RussianStrings[i].Str));
+                        // We give the search for the corresponding rows to a secondary thread
                         new Thread(() => FoundRight(new StringData(RussianStrings[i]), i)).Start();
                         RussianStrings.RemoveAt(i);
                         i--;
+                        // Increasing the number of running secondary threads
                         RunningThreads++;
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Search for matches by the Petrenko index
+        /// </summary>
+        /// <param name="string">String</param>
+        /// <param name="index">Index in the list of results</param>
         private static void FoundRight(StringData @string, int index)
         {
             foreach(StringData data in EnglishStrings)
             {
-                if(@string.PetrencoIndex == data.PetrencoIndex)
+                // A simple equality check
+                if (@string.PetrencoIndex == data.PetrencoIndex)
                 {
                     Results[index].AddEnglishString(data.Str);
                 }
             }
+
+            // Reducing the number of running threads
             RunningThreads--;
         }
     }
