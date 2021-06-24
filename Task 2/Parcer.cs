@@ -7,8 +7,12 @@ using Task_2.Properties;
 
 namespace Task_2
 {
+    /// <summary>
+    /// A class that describes the structure of the data used
+    /// </summary>
     internal class DataStructure
     {
+
         public string SourceText { get; private set; }
         public string Translation { get; private set; }
         public string Key { get; private set; }
@@ -29,6 +33,7 @@ namespace Task_2
         {
             Data = new List<DataStructure>();
 
+            // Filling in the list with data from the input file
             using (StreamReader fileReader = new StreamReader(inputPath))
             {
                 JObject dataJSON = JObject.Parse(fileReader.ReadToEnd());
@@ -41,12 +46,19 @@ namespace Task_2
                 }
             }
 
+            //We give the creation of the internal structure of the EXEL file to a separate thread, so as not to waste time on this
             new System.Threading.Thread(() => CreateExelStructure()).Start();
 
+            //Creating an XML document that is the markup of an excel table
             CreateXmlDocument();
+
+            //Creating an Exel file
             CreateExcelFile(outputPath, filename);
         }
 
+        /// <summary>
+        /// Сreates the internal structure of the excel file
+        /// </summary>
         private void CreateExelStructure()
         {
             Directory.CreateDirectory("ExelFile");
@@ -95,6 +107,11 @@ namespace Task_2
 
         }
 
+        /// <summary>
+        /// Creates an excel file (zip archive with xlsx format) from a pre-prepared structure
+        /// </summary>
+        /// <param name="outputPath">Directory for saving the output file</param>
+        /// <param name="filename">Output file name</param>
         private void CreateExcelFile(string outputPath, string filename)
         {
             string fileFormat = ".xlsx";
@@ -103,26 +120,48 @@ namespace Task_2
                 outputPath += @"\";
             }
 
+            // If a file with the specified name exists on the specified path, then delete it
             if (File.Exists(outputPath + filename + fileFormat))
             {
                 File.Delete(outputPath + filename + fileFormat);
             }
+
+            // Creating an xslx archive
             ZipFile.CreateFromDirectory("ExelFile", outputPath + filename + fileFormat);
+
+            // Deleting the folder with the internal structure of the file
             Directory.Delete("ExelFile", true);
         }
 
+
+        /// <summary>
+        /// Creating an XML document that is the markup of an excel table
+        /// </summary>
         private void CreateXmlDocument()
         {
             XNamespace xmlns = "http://schemas.openxmlformats.org/spreadsheetml/2006/main";
+
+            // Parsing a document template from resources
             XDocument xmlDocument = XDocument.Parse(Resources.ResourceManager.GetString("sheet1"));
 
+            // Adding data to the document
             for (int i = 0; i < Data.Count; i++)
             {
                 addtoXML(ref xmlDocument, Data[i].SourceText, Data[i].Translation, Data[i].Key, i + 2);
             }
+
+            //Saving the document
             xmlDocument.Save(@"ExelFile\xl\worksheets\sheet1.xml");
         }
 
+        /// <summary>
+        /// Adding the specified data to the specified XML document
+        /// </summary>
+        /// <param name="xmlDocument">XML document</param>
+        /// <param name="cell_1">Data to add to column # 1</param>
+        /// <param name="cell_2">Data to add to column # 2</param>
+        /// <param name="cell_3">Data to add to column # 3</param>
+        /// <param name="rowCounter">Row number</param>
         private void addtoXML(ref XDocument xmlDocument, string cell_1, string cell_2, string cell_3, int rowCounter)
         {
             XNamespace x14ac = "http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac";
