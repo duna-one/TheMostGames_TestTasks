@@ -82,6 +82,7 @@ namespace Task_1
             }
             catch (Exception)
             {
+                System.Threading.Thread.Sleep(50);
                 //If server returns error, try again
                 getInfoFromServer(id);
                 return;
