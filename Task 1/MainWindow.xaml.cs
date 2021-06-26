@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Task_1
 {
@@ -88,7 +89,7 @@ namespace Task_1
             catch (Exception e)
             {
                 //Showing the received error message
-                MessageBox.Show("При обработке запроса для ID " + id + 
+                MessageBox.Show("При обработке запроса для ID " + id +
                                 " сервер вернул ошибку:\n" + e.Message);
                 return;
             }
@@ -106,14 +107,13 @@ namespace Task_1
 
         /// <summary>
         /// Input text filter
-        /// </summary>
-        private void Identificators_Box_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        /// </summary>      
+        private void Identificators_Box_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            //No separator as first symbol
-            if (e.Handled = Identificators_Box.Text.Length == 0 && (e.Text == "," || e.Text == ";" || e.Text == " ")) { return; }
-
             Regex regex = new Regex("[0-9]|[,;]");
-            e.Handled = !regex.IsMatch(e.Text);
+            e.Handled = e.Key == Key.Space ||
+                        !regex.IsMatch(new KeyConverter().ConvertToString(e.Key)) && 
+                        e.Key != Key.Back;
         }
     }
 }
