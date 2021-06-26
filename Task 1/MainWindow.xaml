@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Task 1" Height="324" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Task 1" Height="400" Width="650" ResizeMode="CanResize" WindowStartupLocation="CenterScreen"
+        MinHeight="150" MinWidth="444">
     <Window.Resources>
         <Style TargetType="{x:Type TextBlock}" x:Key="WrapText">
             <Setter Property="TextWrapping" Value="Wrap"/>
@@ -16,10 +17,10 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Label Content="Идентификаторы строк: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Identificators_Box" HorizontalAlignment="Left" Margin="155,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" PreviewTextInput="Identificators_Box_PreviewTextInput"/>
-        <Button Content="Подсчитать" HorizontalAlignment="Left" Margin="335,13,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
-        <DataGrid Name="OutputDataTable" Margin="10,40,10,10" GridLinesVisibility="None" IsReadOnly="True" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeColumns="False">
+        <Label Content="Идентификаторы строк: " Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="Identificators_Box" Margin="155,14,0,0" TextWrapping="Wrap" PreviewTextInput="Identificators_Box_PreviewTextInput" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170"/>
+        <Button Content="Подсчитать" Margin="335,13,0,0" Click="Button_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+        <DataGrid Name="OutputDataTable" Margin="10,40,10,10" GridLinesVisibility="None" IsReadOnly="True" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeColumns="False" HorizontalAlignment="Left">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="ContentTemplate">
