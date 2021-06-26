@@ -35,11 +35,16 @@ namespace Task_1
             //Getting the id
             string[] IDs = getIds();
 
+            //List of used IDs to avoid duplication
+            List<int> UsedIDs = new List<int>();
+
             //For each Id, we get a response from the server
             foreach (string id in IDs)
             {
-                if (id.Length == 0) { continue; }
+                if (id.Length == 0 || UsedIDs.Contains(int.Parse(id))) { continue; }
                 getInfoFromServer(id);
+                //Adding the ID to the list of used
+                UsedIDs.Add(int.Parse(id));
             }
 
             //Adding information to a table
@@ -80,11 +85,11 @@ namespace Task_1
                 //Request to server
                 webResponse = webRequest.GetResponse();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                System.Threading.Thread.Sleep(50);
-                //If server returns error, try again
-                getInfoFromServer(id);
+                //Showing the received error message
+                MessageBox.Show("При обработке запроса для ID " + id + 
+                                " сервер вернул ошибку:\n" + e.Message);
                 return;
             }
 
