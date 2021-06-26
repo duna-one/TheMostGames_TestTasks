@@ -34,7 +34,7 @@ namespace Task_1
             OutputDataTable.ItemsSource = null;
 
             //Getting the id
-            string[] IDs = getIds();
+            List<string> IDs = getIds();
 
             //List of used IDs to avoid duplication
             List<int> UsedIDs = new List<int>();
@@ -57,19 +57,34 @@ namespace Task_1
         /// Splits the text from the input string into an ID
         /// </summary>
         /// <returns>Array of IDs</returns>
-        private string[] getIds()
+        private List<string> getIds()
         {
-            //Remove spaces
-            string ids = Identificators_Box.Text.Replace(" ", "");
+            string ids = Identificators_Box.Text;
+            List<string> splittedIDs = new List<string>();
 
-            //If there are 2 types of separators, then we make one type
+            // If there are 2 types of separators, then we make one type
             if (ids.Contains(";") && ids.Contains(","))
             {
                 ids = ids.Replace(",", ";");
             }
 
-            //Splitting the string by delimiters and returning an array
-            return ids.Split(";");
+            // Splitting the string by delimiters and returning an array
+            foreach(string id in ids.Split(";"))
+            {
+                splittedIDs.Add(id);
+            }
+
+            // Deleting all invalid IDs from the request list
+            for (int i = 0; i < splittedIDs.Count; i++)
+            {
+                string id = splittedIDs[i];
+                if (int.Parse(id) is > 20 or < 1)
+                {
+                    while (splittedIDs.Remove(id));
+                    i--;
+                }
+            }
+            return splittedIDs;
         }
 
         /// <summary>
@@ -110,10 +125,31 @@ namespace Task_1
         /// </summary>      
         private void Identificators_Box_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            if(e.Key == Key.Back) { return; }
+
             Regex regex = new Regex("[0-9]|[,;]");
             e.Handled = e.Key == Key.Space ||
-                        !regex.IsMatch(new KeyConverter().ConvertToString(e.Key)) && 
-                        e.Key != Key.Back;
+                        !regex.IsMatch(new KeyConverter().ConvertToString(e.Key));
+        }
+
+        // Allocate incorrect identifiers to the user
+        private void Identificators_Box_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            string[] ids = Identificators_Box.Text.Replace(",", ";").Split(";");
+            int pointer = 0;
+            Identificators_Box.Focus();
+
+            foreach (string id in ids)
+            {
+                if (id == "") { continue; }
+                if (int.Parse(id) is > 20 or < 1)
+                {
+                    Identificators_Box.SelectionStart = pointer;
+                    Identificators_Box.SelectionLength = id.Length;
+                    Identificators_Box.SelectionBrush = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Red);
+                }
+                pointer += id.Length + 1;
+            }
         }
     }
 }

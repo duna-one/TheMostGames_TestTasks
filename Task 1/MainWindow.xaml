@@ -18,7 +18,7 @@
     </Window.Resources>
     <Grid>
         <Label Content="Идентификаторы строк: " Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox x:Name="Identificators_Box" Margin="155,14,0,0" TextWrapping="Wrap" PreviewKeyDown="Identificators_Box_PreviewKeyDown" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170"/>
+        <TextBox x:Name="Identificators_Box" Margin="155,14,0,0" TextWrapping="Wrap" PreviewKeyDown="Identificators_Box_PreviewKeyDown" TextChanged="Identificators_Box_TextChanged" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170"/>
         <Button Content="Подсчитать" Margin="335,13,0,0" Click="Button_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
         <DataGrid Name="OutputDataTable" Margin="10,40,10,10" GridLinesVisibility="None" IsReadOnly="True" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeColumns="False" HorizontalAlignment="Left">
             <DataGrid.ColumnHeaderStyle>
