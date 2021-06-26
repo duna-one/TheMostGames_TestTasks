@@ -112,7 +112,7 @@ namespace Task_2
         /// </summary>
         /// <param name="outputPath">Directory for saving the output file</param>
         /// <param name="filename">Output file name</param>
-        private void CreateExcelFile(string outputPath, string filename)
+        private static void CreateExcelFile(string outputPath, string filename)
         {
             string fileFormat = ".xlsx";
             if (!outputPath.EndsWith(@"\"))
@@ -139,8 +139,6 @@ namespace Task_2
         /// </summary>
         private void CreateXmlDocument()
         {
-            XNamespace xmlns = "http://schemas.openxmlformats.org/spreadsheetml/2006/main";
-
             // Parsing a document template from resources
             XDocument xmlDocument = XDocument.Parse(Resources.ResourceManager.GetString("sheet1"));
 

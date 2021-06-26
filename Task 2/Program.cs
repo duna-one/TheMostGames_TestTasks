@@ -5,9 +5,10 @@ namespace Task_2
 {
     internal class Program
     {
-        private static string fileSrc="";   // File source
-        private static string outputDir=""; // Output directory
-        private static string fileName="";  // File name
+        private static string fileSrc = "";   // File source
+        private static string outputDir = ""; // Output directory
+        private static string fileName = "";  // File name
+        private static string languagePref = ""; // Language prefix
 
         private static void Main(string[] args)
         {
@@ -19,6 +20,10 @@ namespace Task_2
                 if (!File.Exists(fileSrc))
                 {
                     Console.WriteLine("file not Exists");
+                }
+                else
+                {
+                    languagePref = fileSrc.Substring(fileSrc.IndexOf("-") + 1, fileSrc.Length - 5);
                 }
             }
 
@@ -48,21 +53,21 @@ namespace Task_2
             }
 
             // File name input
-            while (fileName=="")
+            while (fileName == "")
             {
                 Console.WriteLine("Enter output file name");
                 fileName = Console.ReadLine();
-            }           
+            }
 
             // Main process inside constructor
-            new Parcer(fileSrc, outputDir, fileName);
+            _ = new Parcer(fileSrc, outputDir, fileName + "-" + languagePref);
 
 
             // Notification of work completion and indication of the place where the output file was saved
             Console.WriteLine("The parser has finished working. Output file:");
             Console.WriteLine(outputDir + fileName);
             Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
+            _ = Console.ReadKey();
         }
     }
 }
