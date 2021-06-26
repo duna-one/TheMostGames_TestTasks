@@ -118,6 +118,7 @@ namespace Task_3
         {
             foreach(StringData data in EnglishStrings)
             {
+                while (data.ThreadRunning) ;
                 // A simple equality check
                 if (@string.PetrencoIndex == data.PetrencoIndex)
                 {
